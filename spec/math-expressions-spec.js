@@ -207,6 +207,10 @@ describe("expression", function() {
 			'x*log(y)' : 'log(y^x)',
 		'exp(x^y)' : 'exp(x^y)',
 		'(exp(x))^y' : 'exp(x*y)',
+		'(exp(x))^3' : 'exp(3*x)',
+		'x*y*z' : 'x*y*z',
+		'w*x*y*z' : 'w*x*y*z',
+		'a*b*c*d*f*g*h' : 'a*b*c*d*f*g*h',
     };
 
     _.each( _.keys(equivalences), function(lhs) {
